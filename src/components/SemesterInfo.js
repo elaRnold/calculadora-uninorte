@@ -7,19 +7,21 @@ const SemesterInfo = ({ semester }) => {
 
   return (
     <>
-      <div className="flex items-center space-x-4 py-10">
-        <div className="w-full text-center">
-          <h1 className="font-extrabold	text-4xl my-5 text-blue-950">
-            {semester.semester.name}
-          </h1>
-          <p className="font-bold text-2xl my-5 bg-blue-950	 text-cyan-50 p-2">
-            PGA Actual: {semester.currentPGA}
-          </p>
-          <p className="font-bold text-2xl my-5 bg-blue-950	 text-cyan-50 p-2">
-            Créditos acumulados: {semester.creditsSoFar}
-          </p>
+      <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:py-11">
+        <div className="w-full lg:w-2/4 text-center">
+          <div className="py-6">
+            <h1 className="font-extrabold	text-4xl my-5 text-blue-950">
+              {semester.semester.name}
+            </h1>
+            <p className="font-bold text-2xl my-5 bg-blue-950	 text-cyan-50 p-2">
+              PGA Actual: {semester.currentPGA}
+            </p>
+            <p className="font-bold text-2xl my-5 bg-blue-950	 text-cyan-50 p-2">
+              Créditos acumulados: {semester.creditsSoFar}
+            </p>
+          </div>
         </div>
-        <div className="w-full bg-slate-200">
+        <div className="w-full lg:w-2/4 bg-slate-200">
           <CChart
             type="line"
             data={{

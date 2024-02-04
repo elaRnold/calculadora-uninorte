@@ -25,15 +25,22 @@ const Layout = ({ data }) => {
     <div className="flex min-h-screen">
       <div className="flex-1 flex flex-col min-h-screen">
         <header className="flex justify-between items-center bg-red-500 p-2 shadow-xl">
-          <h1 className="text-white text-2xl font-bold flex">
-          <img id="logo_uni_sticky" className="w-7 mr-2" alt="" src="https://www.uninorte.edu.co/o/uninorte-theme/images/uninorte/header/uni-logo-symbol.svg"></img>
-            Calculadora Uninorte
-          </h1>
+          <a href="/">
+            <h1 className="text-white text-2xl font-bold flex">
+              <img
+                id="logo_uni_sticky"
+                className="w-7 mr-2"
+                alt=""
+                src="https://www.uninorte.edu.co/o/uninorte-theme/images/uninorte/header/uni-logo-symbol.svg"
+              ></img>
+              Calculadora Uninorte
+            </h1>
+          </a>
           <button
             onClick={toggleMenu}
-            className="text-white text-base px-2 py-1"
+            className="text-white text-base"
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimes className="w-7 h-7"/> : <FaBars className="w-7 h-7" />}
           </button>
         </header>
         <div
@@ -64,43 +71,43 @@ const Layout = ({ data }) => {
             {optionComponents[currentOption]}
           </div>
         </div>
-        <footer class="bg-black	 text-white py-8">
-          <div class="container mx-auto flex flex-col items-center">
-            <div class="mb-4">
+        <footer className="bg-black	 text-white py-8">
+          <div className="container mx-auto flex flex-col items-center">
+            <div className="mb-4">
               <img
                 src="https://www.uninorte.edu.co/o/uninorte-theme/images/uninorte/footer_un/logo.png"
                 alt="Logo"
-                class="h-12 w-auto"
+                className="h-12 w-auto"
               ></img>
             </div>
-            <div class="my-3 flex space-x-4">
+            <div className="my-3 flex space-x-4">
               <a
                 href="https://www.uninorte.edu.co/"
-                class="hover:text-cyan-400"
+                className="hover:text-cyan-400"
               >
                 Inicio
               </a>
               <a
                 href="https://www.uninorte.edu.co/web/sobre-nosotros"
-                class="hover:text-cyan-400"
+                className="hover:text-cyan-400"
               >
                 Acerca de
               </a>
               <a
                 href="https://www.uninorte.edu.co/estudia"
-                class="hover:text-cyan-400"
+                className="hover:text-cyan-400"
               >
                 Programas Académicos
               </a>
               <a
                 href="https://www.uninorte.edu.co/canales-de-atencion"
-                class="hover:text-cyan-400"
+                className="hover:text-cyan-400"
               >
                 Contacto
               </a>
             </div>
-            <p class="text-sm text-center">Universidad del Norte &copy; 2024</p>
-            <p class="text-sm text-center">Todos los derechos reservados</p>
+            <p className="text-sm text-center">Universidad del Norte &copy; 2024</p>
+            <p className="text-sm text-center">Todos los derechos reservados</p>
           </div>
         </footer>
       </div>
