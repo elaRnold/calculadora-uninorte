@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SemesterInfo from "./components/SemesterInfo";
+import CourseList from "./components/CourseList";
+import Layout from "./components/Layout";
+import data from "../src/assets/data";
 
 function App() {
+  const { courses } = data;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout data={data}>
+        {/* <div> */}
+          {/* <h1 className="font-black">Calculadora PGA</h1> */}
+          {/* <SemesterInfo semester={data} /> */}
+          {/* <CourseList courses={courses} /> */}
+        {/* </div> */}
+      </Layout>
+    </>
   );
 }
 
